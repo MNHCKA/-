@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老百京了</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!---->
+    <script type="text/javascript">
+        $(function () {
+            $("#submit").click(function () {
+                // alert(document.getElementById("insertion1").value)
+                // alert(document.getElementById("inputText").value)
+                let inputText = $("#inputText").val()
+                let insertion = $(":radio:checked").val()
+                let output = String()
+                // alert(inputText)
+                // alert(insertion)
+                for (let index = 0; index < inputText.length; index++) {
+                    output = output.concat(inputText.substring(index, index + 1))
+                    output = output.concat(insertion)
+                }
+                // $("#inputText").val(output)
+                $("#output").text(output)
+
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+<center>
+    <input type="text" id="inputText" value="老百京"/><br>
+    <input type="radio" name="choice" id="insertion1" value="儿" checked="true">老百京儿</input>
+    <input type="radio" name="choice" id="insertion2" value="ㄦ">老百京ㄦ</input>
+    <input type="radio" name="choice" id="insertion3" value="ル">老百京ル</input><br>
+    <input type="radio" name="choice" id="insertion4" value="♥">爱心♥</input>
+    <input type="radio" name="choice" id="insertion5" value="⚡">电音⚡</input>
+    <input type="radio" name="choice" id="insertion6" value="💃">影流之主💃</input><br>
+
+    <!--    <input type="button" id="submit" value="提交" onclick="doInsert()">提交<br/>-->
+    <input type="button" id="submit" value="提交">您猜怎么着<br>
+    <br/>
+    <div id="output"><div>
+
+</center>
+</body>
+</html>
